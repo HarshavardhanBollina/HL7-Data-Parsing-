@@ -1,18 +1,23 @@
-import hl7_parser
+import hl7_processing
 import json
 import logging
 import os
 
+# Ensure the logs directory exists
+log_directory = 'logs'
+if not os.path.exists(log_directory):
+    os.makedirs(log_directory)
+
 # Configure logging
-logging.basicConfig(filename='logs/error.log', level=logging.INFO)
+logging.basicConfig(filename=os.path.join(log_directory, 'error.log'), level=logging.INFO)
 
 def parse_hl7_message(file_path):
     try:
         with open(file_path, 'r') as file:
             message = file.read()
-        h = hl7_parser.parse(message)
+        h = hl7_processing.parse(message)
         return h
-    except hl7_parser.ParseException as e:
+    except hl7_processing.ParseException as e:
         logging.error(f"Parse error in HL7 message from {file_path}: {e}")
     except Exception as e:
         logging.error(f"General error: {e}")
@@ -39,5 +44,5 @@ def process_files(data_folder):
                 print(f"JSON output for {filename}:\n{json_output}\n")
 
 if __name__ == "__main__":
-    data_folder = "/HL7-Data-Parsing-/sample_data"
+    data_folder = "sample_data"
     process_files(data_folder)
