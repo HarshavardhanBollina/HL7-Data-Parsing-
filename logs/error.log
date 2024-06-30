@@ -2,3 +2,8 @@ ERROR:root:Error in HL7 message from sample_data/adt_a01.hl7: First segment is ,
 ERROR:root:Error in HL7 message from sample_data/orm_o01.hl7: First segment is , must be one of MHS, FHS or BHS
 ERROR:root:Error in HL7 message from sample_data/adt_a01.hl7: First segment is , must be one of MHS, FHS or BHS
 ERROR:root:Error in HL7 message from sample_data/orm_o01.hl7: First segment is , must be one of MHS, FHS or BHS
+ERROR:root:Error in HL7 message from INVALID MESSAGE: [Errno 2] No such file or directory: 'INVALID MESSAGE'
+ERROR:root:Error in HL7 message from MSH|^~\&|ADT1|MCM|LABADT|MCM|198808181126|SECURITY|ADT^A01|MSG00001|P|2.3
+EVN|A01|198808181123
+PID|0001|00001122|1122^Doe^John|L|NML^Norma Leah|MRN^Married|19480203|M||C|101 Main St.^^Ann Arbor^MI^44444|GL|(313)555-1212|(313)555-1212||S||123456789|9-87654^3|
+PV1|1|I|2000^2012^01||||004777^MEET^PAUL^J.|||SUR||||ADM|A0|: [Errno 63] File name too long: 'MSH|^~\\&|ADT1|MCM|LABADT|MCM|198808181126|SECURITY|ADT^A01|MSG00001|P|2.3\nEVN|A01|198808181123\nPID|0001|00001122|1122^Doe^John|L|NML^Norma Leah|MRN^Married|19480203|M||C|101 Main St.^^Ann Arbor^MI^44444|GL|(313)555-1212|(313)555-1212||S||123456789|9-87654^3|\nPV1|1|I|2000^2012^01||||004777^MEET^PAUL^J.|||SUR||||ADM|A0|'
