@@ -1,4 +1,4 @@
-import hl7_processing
+import hl7  # Assuming you installed the 'hl7' library
 import json
 import logging
 import os
@@ -15,12 +15,10 @@ def parse_hl7_message(file_path):
     try:
         with open(file_path, 'r') as file:
             message = file.read()
-        h = hl7_processing.parse(message)
+        h = hl7.parse(message)
         return h
-    except hl7_processing.ParseException as e:
-        logging.error(f"Parse error in HL7 message from {file_path}: {e}")
-    except Exception as e:
-        logging.error(f"General error: {e}")
+    except Exception as e:  # Adjust this based on the library's documentation
+        logging.error(f"Error in HL7 message from {file_path}: {e}")
     return None
 
 def hl7_to_json(hl7_message):

@@ -1,0 +1,4 @@
+ERROR:root:Error in HL7 message from sample_data/adt_a01.hl7: First segment is , must be one of MHS, FHS or BHS
+ERROR:root:Error in HL7 message from sample_data/orm_o01.hl7: First segment is , must be one of MHS, FHS or BHS
+ERROR:root:Error in HL7 message from sample_data/adt_a01.hl7: First segment is , must be one of MHS, FHS or BHS
+ERROR:root:Error in HL7 message from sample_data/orm_o01.hl7: First segment is , must be one of MHS, FHS or BHS
